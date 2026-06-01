@@ -48,19 +48,6 @@ map_multistep("i", "<S-Tab>", { "minisnippets_prev", "pmenu_prev" })
 map_multistep("i", "<CR>", { "pmenu_accept", "minipairs_cr" })
 map_multistep("i", "<BS>", { "minipairs_bs" })
 
-require("mini.move").setup({
-  mappings = {
-    left       = "<leader>mh",
-    right      = "<leader>ml",
-    down       = "<leader>mj",
-    up         = "<leader>mk",
-    line_left  = "<leader>mh",
-    line_right = "<leader>ml",
-    line_down  = "<leader>mj",
-    line_up    = "<leader>mk",
-  },
-})
-
 require("mini.notify").setup()
 require("mini.pairs").setup()
 
@@ -78,7 +65,7 @@ require("mini.surround").setup()
 require("mini.tabline").setup()
 require("mini.trailspace").setup()
 
-require("nvim-treesitter").install({
+local languages = {
   "lua",
   "markdown",
   "html",
@@ -90,13 +77,14 @@ require("nvim-treesitter").install({
   "json",
   "yaml",
   "ocaml"
-})
+}
+
+require("nvim-treesitter").install(languages)
 
 local servers = {
   "lua_ls",
   "ts_ls",
   "oxlint",
-  "oxfmt",
   "jsonls",
   "ocamllsp",
 }
@@ -127,9 +115,6 @@ require("conform").setup({
 })
 
 require("ts-error-translator").setup()
-
 require("nvim-ts-autotag").setup()
-
 require("render-markdown").setup()
-
 require("nvim-web-devicons").setup()
