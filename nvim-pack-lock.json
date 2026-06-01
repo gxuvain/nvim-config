@@ -16,6 +16,10 @@
       "rev": "15abccbe23525ee0502d2efe620c77db00bfb93c",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
+    "nvim": {
+      "rev": "0303a7208dba448c459767486a38a6ec05c4216b",
+      "src": "https://github.com/catppuccin/nvim"
+    },
     "nvim-lspconfig": {
       "rev": "9573948c38bfabeec353ae7dd7d3ffec4c506a6b",
       "src": "https://github.com/neovim/nvim-lspconfig"
@@ -27,6 +31,14 @@
     "nvim-ts-autotag": {
       "rev": "88c1453db4ba7dd24131086fe51fdf74e587d275",
       "src": "https://github.com/windwp/nvim-ts-autotag"
+    },
+    "nvim-web-devicons": {
+      "rev": "dfbfaa967a6f7ec50789bead7ef87e336c1fa63c",
+      "src": "https://github.com/nvim-tree/nvim-web-devicons"
+    },
+    "render-markdown.nvim": {
+      "rev": "5adf0895310c1904e5abfaad40a2baad7fe44a07",
+      "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim"
     },
     "ts-error-translator.nvim": {
       "rev": "558abff11b9e8f4cefc0de09df780c56841c7a4b",

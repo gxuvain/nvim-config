@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
 vim.o.number = true
+vim.o.relativenumber = true
 vim.o.shiftwidth = 2
 vim.o.tabstop = 2
 vim.o.expandtab = true
@@ -14,3 +15,5 @@ vim.o.inccommand = "split"
 vim.o.scrolloff = 10
 vim.o.confirm = true
 vim.o.wrap = false
+vim.o.winborder = "rounded"
+vim.o.pumborder = "rounded"

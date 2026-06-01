@@ -1,4 +1,5 @@
 vim.pack.add({
+  "https://github.com/catppuccin/nvim",
   "https://github.com/nvim-mini/mini.nvim",
   "https://github.com/neovim/nvim-lspconfig",
   "https://github.com/nvim-treesitter/nvim-treesitter",
@@ -7,9 +8,11 @@ vim.pack.add({
   "https://github.com/stevearc/conform.nvim",
   "https://github.com/dmmulroy/ts-error-translator.nvim",
   "https://github.com/windwp/nvim-ts-autotag",
+  "https://github.com/MeanderingProgrammer/render-markdown.nvim",
+  "https://github.com/nvim-tree/nvim-web-devicons"
 })
 
-vim.cmd.colorscheme "minischeme"
+vim.cmd.colorscheme "catppuccin-macchiato"
 
 require("mini.ai").setup()
 
@@ -36,7 +39,6 @@ require("mini.hipatterns").setup({
   },
 })
 
-require("mini.icons").setup()
 require("mini.indentscope").setup()
 
 local map_multistep = require("mini.keymap").map_multistep
@@ -127,3 +129,7 @@ require("conform").setup({
 require("ts-error-translator").setup()
 
 require("nvim-ts-autotag").setup()
+
+require("render-markdown").setup()
+
+require("nvim-web-devicons").setup()
