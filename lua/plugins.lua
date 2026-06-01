@@ -9,7 +9,6 @@ vim.pack.add({
   "https://github.com/dmmulroy/ts-error-translator.nvim",
   "https://github.com/windwp/nvim-ts-autotag",
   "https://github.com/MeanderingProgrammer/render-markdown.nvim",
-  "https://github.com/nvim-tree/nvim-web-devicons"
 })
 
 vim.cmd.colorscheme "catppuccin-macchiato"
@@ -39,6 +38,9 @@ require("mini.hipatterns").setup({
   },
 })
 
+require("mini.icons").setup()
+MiniIcons.mock_nvim_web_devicons()
+
 require("mini.indentscope").setup()
 
 local map_multistep = require("mini.keymap").map_multistep
@@ -59,6 +61,14 @@ vim.keymap.set("n", "<leader>fh", "<Cmd>Pick help<CR>")
 vim.keymap.set("n", "<leader>fc", "<Cmd>Pick colorschemes<CR>")
 
 require("mini.sessions").setup()
+vim.keymap.set("n", "<leader>sn", function()
+  local name = vim.fn.input("Session name: ")
+  if name ~= "" then MiniSessions.write(name) end
+end, { desc = "New session" })
+vim.keymap.set("n", "<leader>sl", "<Cmd>lua MiniSessions.select('read')<CR>")
+vim.keymap.set("n", "<leader>sd", "<Cmd>lua MiniSessions.select('delete')<CR>")
+
+
 require("mini.starter").setup()
 require("mini.statusline").setup()
 require("mini.surround").setup()
@@ -117,4 +127,3 @@ require("conform").setup({
 require("ts-error-translator").setup()
 require("nvim-ts-autotag").setup()
 require("render-markdown").setup()
-require("nvim-web-devicons").setup()
