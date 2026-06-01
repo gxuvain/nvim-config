@@ -95,7 +95,8 @@ local servers = {
   "ts_ls",
   "oxlint",
   "oxfmt",
-  "jsonls"
+  "jsonls",
+  "ocamllsp",
 }
 
 require("mason").setup()
@@ -119,6 +120,7 @@ require("conform").setup({
     typescriptreact = { "oxfmt" },
     json = { "oxfmt" },
     vue = { "oxfmt" },
+    ocaml = { "ocamlformat" }
   },
 })
 
