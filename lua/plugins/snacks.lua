@@ -40,6 +40,7 @@ return {
 		{ "<leader>gl",  function() Snacks.picker.git_log() end,              desc = "Git Log" },
 		{ "<leader>gs",  function() Snacks.picker.git_status() end,           desc = "Git Status" },
 		{ "<leader>gd",  function() Snacks.picker.git_diff() end,             desc = "Git Diff (Hunks)" },
+		{ "<leader>gu",  function() Snacks.git.blame_line() end,              desc = "Git Diff (Hunks)" },
 		{ "<leader>gg",  function() Snacks.lazygit() end,                     desc = "Lazygit" },
 		-- LSP
 		{ "gd",          function() Snacks.picker.lsp_definitions() end,      desc = "Goto Definition" },
