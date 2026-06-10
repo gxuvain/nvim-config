@@ -13,3 +13,4 @@ vim.o.smartcase = true
 vim.o.wrap = false
 vim.o.winborder = "rounded"
 vim.o.pumborder = "rounded"
+vim.o.confirm = true

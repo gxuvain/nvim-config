@@ -5,7 +5,11 @@ return {
 	version = "1.*",
 
 	opts = {
-		keymap = { preset = "enter" },
+		keymap = {
+			preset = "enter",
+			["<S-Tab>"] = { "select_prev", "fallback" },
+			["<Tab>"] = { "select_next", "fallback" },
+		},
 
 		appearance = {
 			use_nvim_cmp_as_default = true,
