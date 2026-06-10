@@ -27,6 +27,7 @@ return {
 		scope = { enabled = true },
 		words = { enabled = true },
 		zen = { enabled = true },
+		git = { enabled = true }
 	},
 	keys = {
 		-- Find
